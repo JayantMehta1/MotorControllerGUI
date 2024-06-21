@@ -4,3 +4,48 @@
 // Project name: SquareLine_Project
 
 #include "ui.h"
+
+// void handleExposureValueChange(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleExposureChangeSetBreakTime(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleBreakTimeValueChange(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleMaxOnTimeChangeSetBreakTime(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleStartStop(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleYes(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleNo(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleMakeCheckMarkWork(lv_event_t * e)
+// {
+// 	// Your code here
+// }
+
+// void handleKeyboardIssue(lv_event_t * e)
+// {
+// 	// Your code here
+// }

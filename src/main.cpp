@@ -221,7 +221,7 @@ void timer_callback(lv_timer_t * timer) {
     lv_label_set_text(ui_LabelTimeRemainingValue, time_str);
 
     if (*remaining_time_ptr <= 0) {
-        handleSystemStop();`
+        handleSystemStop();
     }
 }
 

@@ -36,6 +36,9 @@ lv_obj_t *ui_ButtonNo;
 lv_obj_t *ui_LabelNo;
 lv_obj_t *ui_LabelTimeRemaining;
 lv_obj_t *ui_LabelTimeRemainingValue;
+void ui_event_TextAreaPowerLevel( lv_event_t * e);
+lv_obj_t *ui_TextAreaPowerLevel;
+lv_obj_t *ui_LabelPowerLevel;
 void ui_event_Keyboard1( lv_event_t * e);
 lv_obj_t *ui_Keyboard1;
 lv_obj_t *ui____initial_actions0;
@@ -130,6 +133,18 @@ void ui_event_ButtonNo( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_PRESSED) {
       handleNo( e );
+}
+}
+void ui_event_TextAreaPowerLevel( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      _ui_keyboard_set_target(ui_Keyboard1,  ui_TextAreaPowerLevel);
+}
+if ( event_code == LV_EVENT_FOCUSED) {
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_REMOVE);
+}
+if ( event_code == LV_EVENT_DEFOCUSED) {
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_ADD);
 }
 }
 void ui_event_Keyboard1( lv_event_t * e) {

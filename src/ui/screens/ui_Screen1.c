@@ -13,43 +13,43 @@ lv_obj_clear_flag( ui_Screen1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 ui_LabelExposureTime = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelExposureTime, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelExposureTime, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelExposureTime, -152 );
-lv_obj_set_y( ui_LabelExposureTime, -79 );
+lv_obj_set_x( ui_LabelExposureTime, -173 );
+lv_obj_set_y( ui_LabelExposureTime, -65 );
 lv_obj_set_align( ui_LabelExposureTime, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelExposureTime,"Exposure Time:");
 
 ui_LabelBreakTime = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelBreakTime, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelBreakTime, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelBreakTime, -160 );
-lv_obj_set_y( ui_LabelBreakTime, 3 );
+lv_obj_set_x( ui_LabelBreakTime, 51 );
+lv_obj_set_y( ui_LabelBreakTime, 2 );
 lv_obj_set_align( ui_LabelBreakTime, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelBreakTime,"Break Time:");
 lv_obj_add_flag( ui_LabelBreakTime, LV_OBJ_FLAG_HIDDEN );   /// Flags
 
 ui_TextAreaExposureTime = lv_textarea_create(ui_Screen1);
-lv_obj_set_width( ui_TextAreaExposureTime, 150);
-lv_obj_set_height( ui_TextAreaExposureTime, 44);
-lv_obj_set_x( ui_TextAreaExposureTime, -11 );
-lv_obj_set_y( ui_TextAreaExposureTime, -83 );
+lv_obj_set_width( ui_TextAreaExposureTime, 97);
+lv_obj_set_height( ui_TextAreaExposureTime, 41);
+lv_obj_set_x( ui_TextAreaExposureTime, -62 );
+lv_obj_set_y( ui_TextAreaExposureTime, -64 );
 lv_obj_set_align( ui_TextAreaExposureTime, LV_ALIGN_CENTER );
 if ("1,2,3,4,5,6,7,8,9,0"=="") lv_textarea_set_accepted_chars(ui_TextAreaExposureTime, NULL);
 else lv_textarea_set_accepted_chars(ui_TextAreaExposureTime, "1,2,3,4,5,6,7,8,9,0");
 lv_textarea_set_text(ui_TextAreaExposureTime,"30");
-lv_textarea_set_placeholder_text(ui_TextAreaExposureTime,"Enter in seconds");
+lv_textarea_set_placeholder_text(ui_TextAreaExposureTime,"seconds");
 
 
 
 ui_TextAreaBreakTime = lv_textarea_create(ui_Screen1);
-lv_obj_set_width( ui_TextAreaBreakTime, 150);
+lv_obj_set_width( ui_TextAreaBreakTime, 101);
 lv_obj_set_height( ui_TextAreaBreakTime, 40);
-lv_obj_set_x( ui_TextAreaBreakTime, -16 );
-lv_obj_set_y( ui_TextAreaBreakTime, 3 );
+lv_obj_set_x( ui_TextAreaBreakTime, 170 );
+lv_obj_set_y( ui_TextAreaBreakTime, 2 );
 lv_obj_set_align( ui_TextAreaBreakTime, LV_ALIGN_CENTER );
 if ("1,2,3,4,5,6,7,8,9,0"=="") lv_textarea_set_accepted_chars(ui_TextAreaBreakTime, NULL);
 else lv_textarea_set_accepted_chars(ui_TextAreaBreakTime, "1,2,3,4,5,6,7,8,9,0");
 lv_textarea_set_text(ui_TextAreaBreakTime,"0");
-lv_textarea_set_placeholder_text(ui_TextAreaBreakTime,"Enter in seconds");
+lv_textarea_set_placeholder_text(ui_TextAreaBreakTime,"seconds");
 lv_obj_add_flag( ui_TextAreaBreakTime, LV_OBJ_FLAG_HIDDEN );   /// Flags
 
 
@@ -65,27 +65,27 @@ lv_label_set_text(ui_LabelTotalTime,"Total Time:");
 ui_LabelMaxOnTime = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelMaxOnTime, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelMaxOnTime, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelMaxOnTime, -156 );
-lv_obj_set_y( ui_LabelMaxOnTime, -37 );
+lv_obj_set_x( ui_LabelMaxOnTime, 58 );
+lv_obj_set_y( ui_LabelMaxOnTime, -65 );
 lv_obj_set_align( ui_LabelMaxOnTime, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelMaxOnTime,"Max On Time:");
 
 ui_TextAreaMaxOnTime = lv_textarea_create(ui_Screen1);
-lv_obj_set_width( ui_TextAreaMaxOnTime, 150);
+lv_obj_set_width( ui_TextAreaMaxOnTime, 97);
 lv_obj_set_height( ui_TextAreaMaxOnTime, 40);
-lv_obj_set_x( ui_TextAreaMaxOnTime, -12 );
-lv_obj_set_y( ui_TextAreaMaxOnTime, -39 );
+lv_obj_set_x( ui_TextAreaMaxOnTime, 171 );
+lv_obj_set_y( ui_TextAreaMaxOnTime, -67 );
 lv_obj_set_align( ui_TextAreaMaxOnTime, LV_ALIGN_CENTER );
 lv_textarea_set_text(ui_TextAreaMaxOnTime,"30");
-lv_textarea_set_placeholder_text(ui_TextAreaMaxOnTime,"Enter in seconds");
+lv_textarea_set_placeholder_text(ui_TextAreaMaxOnTime,"seconds");
 
 
 
 ui_ButtonStartStop = lv_btn_create(ui_Screen1);
 lv_obj_set_width( ui_ButtonStartStop, 100);
 lv_obj_set_height( ui_ButtonStartStop, 50);
-lv_obj_set_x( ui_ButtonStartStop, -150 );
-lv_obj_set_y( ui_ButtonStartStop, 98 );
+lv_obj_set_x( ui_ButtonStartStop, -162 );
+lv_obj_set_y( ui_ButtonStartStop, 115 );
 lv_obj_set_align( ui_ButtonStartStop, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_ButtonStartStop, LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
 lv_obj_clear_flag( ui_ButtonStartStop, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
@@ -93,8 +93,8 @@ lv_obj_clear_flag( ui_ButtonStartStop, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 ui_LabelStartStop = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelStartStop, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelStartStop, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelStartStop, -151 );
-lv_obj_set_y( ui_LabelStartStop, 97 );
+lv_obj_set_x( ui_LabelStartStop, -162 );
+lv_obj_set_y( ui_LabelStartStop, 115 );
 lv_obj_set_align( ui_LabelStartStop, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelStartStop,"Start");
 
@@ -109,8 +109,8 @@ lv_label_set_text(ui_LabelTotalTimeValue,"30");
 ui_ButtonYes = lv_btn_create(ui_Screen1);
 lv_obj_set_width( ui_ButtonYes, 100);
 lv_obj_set_height( ui_ButtonYes, 50);
-lv_obj_set_x( ui_ButtonYes, -8 );
-lv_obj_set_y( ui_ButtonYes, 68 );
+lv_obj_set_x( ui_ButtonYes, -56 );
+lv_obj_set_y( ui_ButtonYes, 116 );
 lv_obj_set_align( ui_ButtonYes, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_ButtonYes, LV_OBJ_FLAG_HIDDEN | LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
 lv_obj_clear_flag( ui_ButtonYes, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
@@ -118,8 +118,8 @@ lv_obj_clear_flag( ui_ButtonYes, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 ui_LabelYes = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelYes, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelYes, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelYes, -8 );
-lv_obj_set_y( ui_LabelYes, 68 );
+lv_obj_set_x( ui_LabelYes, -57 );
+lv_obj_set_y( ui_LabelYes, 115 );
 lv_obj_set_align( ui_LabelYes, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelYes,"Yes");
 lv_obj_add_flag( ui_LabelYes, LV_OBJ_FLAG_HIDDEN );   /// Flags
@@ -127,8 +127,8 @@ lv_obj_add_flag( ui_LabelYes, LV_OBJ_FLAG_HIDDEN );   /// Flags
 ui_ButtonNo = lv_btn_create(ui_Screen1);
 lv_obj_set_width( ui_ButtonNo, 100);
 lv_obj_set_height( ui_ButtonNo, 50);
-lv_obj_set_x( ui_ButtonNo, -10 );
-lv_obj_set_y( ui_ButtonNo, 126 );
+lv_obj_set_x( ui_ButtonNo, 69 );
+lv_obj_set_y( ui_ButtonNo, 115 );
 lv_obj_set_align( ui_ButtonNo, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_ButtonNo, LV_OBJ_FLAG_HIDDEN | LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
 lv_obj_clear_flag( ui_ButtonNo, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
@@ -136,8 +136,8 @@ lv_obj_clear_flag( ui_ButtonNo, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 ui_LabelNo = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelNo, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelNo, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelNo, -10 );
-lv_obj_set_y( ui_LabelNo, 126 );
+lv_obj_set_x( ui_LabelNo, 70 );
+lv_obj_set_y( ui_LabelNo, 115 );
 lv_obj_set_align( ui_LabelNo, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelNo,"No");
 lv_obj_add_flag( ui_LabelNo, LV_OBJ_FLAG_HIDDEN );   /// Flags
@@ -145,8 +145,8 @@ lv_obj_add_flag( ui_LabelNo, LV_OBJ_FLAG_HIDDEN );   /// Flags
 ui_LabelTimeRemaining = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelTimeRemaining, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelTimeRemaining, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelTimeRemaining, 99 );
-lv_obj_set_y( ui_LabelTimeRemaining, -138 );
+lv_obj_set_x( ui_LabelTimeRemaining, 100 );
+lv_obj_set_y( ui_LabelTimeRemaining, -132 );
 lv_obj_set_align( ui_LabelTimeRemaining, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelTimeRemaining,"Time Remaining:");
 lv_obj_add_flag( ui_LabelTimeRemaining, LV_OBJ_FLAG_HIDDEN );   /// Flags
@@ -154,18 +154,37 @@ lv_obj_add_flag( ui_LabelTimeRemaining, LV_OBJ_FLAG_HIDDEN );   /// Flags
 ui_LabelTimeRemainingValue = lv_label_create(ui_Screen1);
 lv_obj_set_width( ui_LabelTimeRemainingValue, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_LabelTimeRemainingValue, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_LabelTimeRemainingValue, 199 );
-lv_obj_set_y( ui_LabelTimeRemainingValue, -138 );
+lv_obj_set_x( ui_LabelTimeRemainingValue, 190 );
+lv_obj_set_y( ui_LabelTimeRemainingValue, -132 );
 lv_obj_set_align( ui_LabelTimeRemainingValue, LV_ALIGN_CENTER );
 lv_label_set_text(ui_LabelTimeRemainingValue,"");
 lv_obj_add_flag( ui_LabelTimeRemainingValue, LV_OBJ_FLAG_HIDDEN );   /// Flags
+
+ui_TextAreaPowerLevel = lv_textarea_create(ui_Screen1);
+lv_obj_set_width( ui_TextAreaPowerLevel, 99);
+lv_obj_set_height( ui_TextAreaPowerLevel, 40);
+lv_obj_set_x( ui_TextAreaPowerLevel, -65 );
+lv_obj_set_y( ui_TextAreaPowerLevel, 0 );
+lv_obj_set_align( ui_TextAreaPowerLevel, LV_ALIGN_CENTER );
+lv_textarea_set_text(ui_TextAreaPowerLevel,"255");
+lv_textarea_set_placeholder_text(ui_TextAreaPowerLevel,"0-255");
+
+
+
+ui_LabelPowerLevel = lv_label_create(ui_Screen1);
+lv_obj_set_width( ui_LabelPowerLevel, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_LabelPowerLevel, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_LabelPowerLevel, -182 );
+lv_obj_set_y( ui_LabelPowerLevel, 2 );
+lv_obj_set_align( ui_LabelPowerLevel, LV_ALIGN_CENTER );
+lv_label_set_text(ui_LabelPowerLevel,"Power Level:");
 
 ui_Keyboard1 = lv_keyboard_create(ui_Screen1);
 lv_keyboard_set_mode(ui_Keyboard1,LV_KEYBOARD_MODE_NUMBER);
 lv_obj_set_width( ui_Keyboard1, 466);
 lv_obj_set_height( ui_Keyboard1, 120);
 lv_obj_set_x( ui_Keyboard1, -3 );
-lv_obj_set_y( ui_Keyboard1, 87 );
+lv_obj_set_y( ui_Keyboard1, 93 );
 lv_obj_set_align( ui_Keyboard1, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN );   /// Flags
 
@@ -176,6 +195,7 @@ lv_obj_add_event_cb(ui_ButtonStartStop, ui_event_ButtonStartStop, LV_EVENT_ALL, 
 lv_obj_add_event_cb(ui_LabelStartStop, ui_event_LabelStartStop, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_ButtonYes, ui_event_ButtonYes, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_ButtonNo, ui_event_ButtonNo, LV_EVENT_ALL, NULL);
+lv_obj_add_event_cb(ui_TextAreaPowerLevel, ui_event_TextAreaPowerLevel, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_Keyboard1, ui_event_Keyboard1, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_Screen1, ui_event_Screen1, LV_EVENT_ALL, NULL);
 
