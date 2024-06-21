@@ -20,17 +20,24 @@ lv_obj_t *ui_TextAreaExposureTime;
 void ui_event_TextAreaBreakTime( lv_event_t * e);
 lv_obj_t *ui_TextAreaBreakTime;
 lv_obj_t *ui_LabelTotalTime;
-lv_obj_t *ui_Keyboard1;
 lv_obj_t *ui_LabelMaxOnTime;
 void ui_event_TextAreaMaxOnTime( lv_event_t * e);
 lv_obj_t *ui_TextAreaMaxOnTime;
-lv_obj_t *ui_TextArea4;
-void ui_event_ButtonStart( lv_event_t * e);
-lv_obj_t *ui_ButtonStart;
-lv_obj_t *ui_LabelStart;
-void ui_event_ButtonStop( lv_event_t * e);
-lv_obj_t *ui_ButtonStop;
-lv_obj_t *ui_LabelStop;
+void ui_event_ButtonStartStop( lv_event_t * e);
+lv_obj_t *ui_ButtonStartStop;
+void ui_event_LabelStartStop( lv_event_t * e);
+lv_obj_t *ui_LabelStartStop;
+lv_obj_t *ui_LabelTotalTimeValue;
+void ui_event_ButtonYes( lv_event_t * e);
+lv_obj_t *ui_ButtonYes;
+lv_obj_t *ui_LabelYes;
+void ui_event_ButtonNo( lv_event_t * e);
+lv_obj_t *ui_ButtonNo;
+lv_obj_t *ui_LabelNo;
+lv_obj_t *ui_LabelTimeRemaining;
+lv_obj_t *ui_LabelTimeRemainingValue;
+void ui_event_Keyboard1( lv_event_t * e);
+lv_obj_t *ui_Keyboard1;
 lv_obj_t *ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -62,10 +69,13 @@ if ( event_code == LV_EVENT_CLICKED) {
       _ui_keyboard_set_target(ui_Keyboard1,  ui_TextAreaExposureTime);
 }
 if ( event_code == LV_EVENT_FOCUSED) {
-      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_TOGGLE);
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_REMOVE);
 }
 if ( event_code == LV_EVENT_DEFOCUSED) {
-      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_TOGGLE);
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_ADD);
+}
+if ( event_code == LV_EVENT_DEFOCUSED) {
+      handleExposureChangeSetBreakTime( e );
 }
 }
 void ui_event_TextAreaBreakTime( lv_event_t * e) {
@@ -74,10 +84,13 @@ if ( event_code == LV_EVENT_CLICKED) {
       _ui_keyboard_set_target(ui_Keyboard1,  ui_TextAreaBreakTime);
 }
 if ( event_code == LV_EVENT_FOCUSED) {
-      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_TOGGLE);
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_REMOVE);
 }
 if ( event_code == LV_EVENT_DEFOCUSED) {
-      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_TOGGLE);
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_ADD);
+}
+if ( event_code == LV_EVENT_DEFOCUSED) {
+      handleBreakTimeValueChange( e );
 }
 }
 void ui_event_TextAreaMaxOnTime( lv_event_t * e) {
@@ -86,22 +99,46 @@ if ( event_code == LV_EVENT_CLICKED) {
       _ui_keyboard_set_target(ui_Keyboard1,  ui_TextAreaMaxOnTime);
 }
 if ( event_code == LV_EVENT_FOCUSED) {
-      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_TOGGLE);
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_REMOVE);
 }
 if ( event_code == LV_EVENT_DEFOCUSED) {
-      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_TOGGLE);
+      _ui_flag_modify( ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_ADD);
+}
+if ( event_code == LV_EVENT_DEFOCUSED) {
+      handleMaxOnTimeChangeSetBreakTime( e );
 }
 }
-void ui_event_ButtonStart( lv_event_t * e) {
+void ui_event_ButtonStartStop( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_PRESSED) {
-      handleStart( e );
+      handleStartStop( e );
 }
 }
-void ui_event_ButtonStop( lv_event_t * e) {
+void ui_event_LabelStartStop( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_PRESSED) {
-      handleStop( e );
+      handleStartStop( e );
+}
+}
+void ui_event_ButtonYes( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_PRESSED) {
+      handleYes( e );
+}
+}
+void ui_event_ButtonNo( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_PRESSED) {
+      handleNo( e );
+}
+}
+void ui_event_Keyboard1( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_PRESSED) {
+      handleMakeCheckMarkWork( e );
+}
+if ( event_code == LV_EVENT_VALUE_CHANGED) {
+      handleKeyboardIssue( e );
 }
 }
 

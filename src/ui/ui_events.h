@@ -11,8 +11,14 @@ extern "C" {
 #endif
 
 void handleExposureValueChange(lv_event_t * e);
-void handleStart(lv_event_t * e);
-void handleStop(lv_event_t * e);
+void handleExposureChangeSetBreakTime(lv_event_t * e);
+void handleBreakTimeValueChange(lv_event_t * e);
+void handleMaxOnTimeChangeSetBreakTime(lv_event_t * e);
+void handleStartStop(lv_event_t * e);
+void handleYes(lv_event_t * e);
+void handleNo(lv_event_t * e);
+void handleMakeCheckMarkWork(lv_event_t * e);
+void handleKeyboardIssue(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

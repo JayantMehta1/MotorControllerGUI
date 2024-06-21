@@ -4,18 +4,3 @@
 // Project name: SquareLine_Project
 
 #include "ui.h"
-
-// void handleExposureValueChange(lv_event_t * e)
-// {
-// 	// Your code here
-// }
-
-// void handleStart(lv_event_t * e)
-// {
-// 	// Your code here
-// }
-
-// void handleStop(lv_event_t * e)
-// {
-// 	// Your code here
-// }
